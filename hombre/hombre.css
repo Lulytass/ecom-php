@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+*{
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 576px;
+}
+                    /*header*/
+header .principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header section p{
+    background-color: rgb(46, 46, 46);
+    color: hsl(36, 100%, 90%);
+}
+header .menu img{
+    text-decoration: none;  
+    color: black;
+
+}
+.menu ul li{
+ list-style: none;
+ cursor: pointer;
+}
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+                /*MODAL CARRITO*/
+.modal .modal-dialog .modalCarrito{
+    background-color: hsl(34, 57%, 70%);
+    width: 30vw;
+    height: 40vh;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+.modalCarrito p{
+    text-align: center;
+}
+.btncarrito{
+    background-color: rgb(184, 165, 89);
+    width: 100%;
+}
+                /*MODAL USUARIO*/
+.modal{
+    background-color: rgba(128, 128, 128, .3);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+body .modal-content{
+    background-color: hsl(34, 57%, 70%);
+    width: 30vw;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    flex-shrink: initial;
+    justify-self: center;
+}
+.cuadro .modal-dialog{
+    display: flex;
+}
+.partes{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+.formulario .partes input, p{
+    align-items: center;
+    font-family: 'Zen Antique', serif;
+}
+.partes .btnusuario{
+    display: block;
+    width: 100%;
+    background-color: rgb(184, 165, 89);
+    color: rgb(0, 0, 0);
+}
+.formulario .partes p{
+    font-size: .8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-family: 'Zen Antique', serif;
+}
+.cuadro, #carrito h5{
+    font-size: 1rem;
+    font-family: 'Zen Antique', serif;
+
+}
+/*ARTICULOS A LA VENTA IMAGENES*/
+.articulos{
+    margin-bottom: 5vh;
+}
+.articulos h5{
+    font-size: 1.5rem;
+    font-family: 'Zen Antique', serif;
+    text-decoration: line-through 5px rgba(255, 255, 0, .5) ; 
+}
+.articulos .card{
+    border: none;
+}
+.precio{
+    display: flex;
+    justify-content: right;
+    transition: 2s;
+
+}
+main .articulos div h6{
+    font-size: 1rem;
+    margin-top: 1vh;
+}
+.precio p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Zen Antique', serif;
+}
+.precio p::before{
+ content: "$";
+}
+.articulos .card:hover .precio{
+    justify-content: center;
+    text-shadow: rgb(151, 151, 151) 2px 2px 1px;
+}
+
+.card-body .btn{
+    margin-top: 5px;
+    width: 100%;
+}
+/*filtros*/
+.chau{
+    display: none;
+}
+.seVe{
+    display: flex;
+}
+div .losFiltros{
+    display: none;
+}
+.botonFiltro{
+    margin: 6px;
+}
+.seVe label{
+    font-size: 1rem;
+    margin: 2vh 0;
+}
+.seVe input{
+    margin-right: 1vw;
+    width: 20px;
+    height: 20px;
+}
+                    /*MENU BAJO*/
+.menubajo{
+    background-color: hsl(36, 100%, 90%);
+    color: rgb(46, 46, 46);
+
+}
+section .tarjetas img{
+    margin: 2vh;
+}
+.menubajo a{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+
+}
+.columna1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+                    /*REDES SOCIALES*/
+nav .redes{
+    display: flex;
+    justify-content: space-between;
+}
+                    /*FOOTER*/
+footer{
+    background-color: rgb(46, 46, 46);
+    color: hsl(36, 100%, 90%);
+}
+                    /*MEDIAS*/
+@media (max-width: 769px) {
+    .tarjetas, .columna1, .mapa{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .columna1 a{
+        display: block;
+        align-self: center;
+    }
+    .tarjetas p, div{
+        align-self: center;
+    }
+    .mapa p, iframe{
+        align-self: center;
+    }
+    body .modal-content{
+        width: 80vw;
+        height: 90vh;
+        overflow: auto
+    }
+    .modal .modal-dialog .modalCarrito{
+        width: 75vw;
+        height: 70vh;
+
+    }
+    .card-body {
+        width: 100%;
+    }
+}
+@media (max-width: 575px){
+    body .modal-content{
+        width: 80vw;
+        height: 60vh;
+    }
+    .modal .modal-dialog .modalCarrito{
+        width: 75vw;
+        height: 35vh;
+
+    }
+}
